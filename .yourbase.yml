@@ -8,7 +8,7 @@ build_targets:
     container:
       image: yourbase/yb_ubuntu:18.04
     commands:
-      - mvn -B -Dlicense.skip install -PallModules,Jenkins
+      - mvn -B -Drat.numUnapprovedLicenses=100 install -PallModules,Jenkins
 ci:
   builds:
     - name: default
