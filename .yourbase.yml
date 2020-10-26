@@ -8,7 +8,7 @@ build_targets:
     container:
       image: yourbase/yb_ubuntu:18.04
     commands:
-      - mvn -B install -PallModules,Jenkins -Drat.skip=true
+      - mvn -B -Dlicense.skip install -PallModules,Jenkins
 ci:
   builds:
     - name: default
